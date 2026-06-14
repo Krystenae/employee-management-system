@@ -48,3 +48,37 @@ let manager2 = new Manager(
     "Finance",
     5
 );
+// Company Class
+
+class Company {
+
+    constructor() {
+        this.employees = [];
+    }
+
+    addEmployee(employee) {
+        this.employees.push(employee);
+    }
+
+    listEmployees() {
+
+        this.employees.forEach(employee => {
+            console.log(employee.describe());
+        });
+    }
+}
+
+// Create Company
+
+let company = new Company();
+
+// Add Employees
+
+company.addEmployee(employee1);
+company.addEmployee(employee2);
+company.addEmployee(manager1);
+company.addEmployee(manager2);
+
+// Display Employees
+
+company.listEmployees();
